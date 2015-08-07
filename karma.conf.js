@@ -1,6 +1,8 @@
 // Karma configuration
 // Generated on Wed Aug 05 2015 16:51:47 GMT+0100 (GMT Daylight Time)
 
+//node "C:\Users\Foo Too\AppData\Roaming\npm\node_modules\karma\bin\karma" start
+
 module.exports = function (config) {
     config.set({
 
@@ -42,7 +44,7 @@ module.exports = function (config) {
 
         junitReporter: {
             outputDir: 'results', // results will be saved as $outputDir/$browserName.xml
-            outputFile: 'output', // if included, results will be saved as $outputDir/$browserName/$outputFile
+            outputFile: 'output.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
             suite: '' // suite will become the package name attribute in xml testsuite element
         },
 
@@ -71,5 +73,8 @@ module.exports = function (config) {
         singleRun: true
 
 
+
+      
+        
     })
 }
