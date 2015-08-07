@@ -8,6 +8,7 @@ module.exports = function (config) {
         basePath: '',
 
 
+
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['jasmine'],
@@ -36,11 +37,13 @@ module.exports = function (config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'dots', 'junit'],
+        reporters: ['progress', 'junit'],
 
-        
-        junitReporter : {
-            outputFile: 'test-results.xml'
+
+        junitReporter: {
+            outputDir: 'results', // results will be saved as $outputDir/$browserName.xml
+            outputFile: 'output', // if included, results will be saved as $outputDir/$browserName/$outputFile
+            suite: '' // suite will become the package name attribute in xml testsuite element
         },
 
 
@@ -63,9 +66,9 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
 
-        singleRun = true
+        singleRun: true
 
 
     })
