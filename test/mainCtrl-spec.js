@@ -55,7 +55,7 @@ describe('And the test begins', function () {
 
       describe('my init setup', function(){
            it('my imges should start with 8', function(){
-               expect($scope.images).toEqual(5);
+               expect($scope.images).toEqual(8);
            })
        });
 
